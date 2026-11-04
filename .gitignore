@@ -1,0 +1,33 @@
+# Environment variables
+.env
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.classGet-ChildItem reports -Recurse
+
+# Testing & Typing caches
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+logs/
+*.log
+
+
+# Temporary investigation files
+logs_backup_interrupted/
+scratch/
+
+# Additional environment files
+.env.*
+!.env.example
+
+# Python and OS files
+.DS_Store
+Thumbs.db

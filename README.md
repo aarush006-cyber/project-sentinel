@@ -73,9 +73,14 @@ A separate deterministic mock-validation report documents offline orchestration 
 
 The CLI entry point is app.main. It supports mock and real modes, case limits, selected case IDs, run counts, and model timeout/token overrides.
 
-Use Python 3.13 or a compatible modern Python version. Install the dependencies required by the project in your environment, then run:
+Use Python 3.10 or newer. Install the dependencies from the repository root:
 
 ~~~powershell
+python -m venv .venv
+.venv\\Scripts\\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
 # Deterministic offline evaluation
 python -m app.main --mode mock
 
@@ -85,7 +90,7 @@ python -m app.main --mode real --model meta/muse-glimmer-30b
 
 Optional arguments include --cases, --case-ids, --runs, --timeout, --max-tokens, and --run-id. Run python -m app.main --help for the complete list.
 
-Configure NVIDIA credentials locally using the environment-variable names expected by app/agents/llm_client.py. Never commit API keys or local .env files.
+For live mode, copy `.env.example` to `.env` and set `NVIDIA_API_KEY`. Optional settings are documented in the example file. Never commit API keys or local `.env` files.
 
 ## Tests
 

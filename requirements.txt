@@ -1,0 +1,10 @@
+langchain-core>=0.3
+langgraph>=0.2
+langchain-nvidia-ai-endpoints>=0.3
+pydantic>=2.0
+python-dotenv>=1.0
+requests>=2.31
+typing-extensions>=4.8
+
+# Development and testing
+pytest>=8.0

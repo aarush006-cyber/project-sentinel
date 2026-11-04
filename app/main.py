@@ -110,7 +110,7 @@ def main():
 
             client_config = NvidiaClientConfig.from_env(**overrides)
             print(f" [NVIDIA CONFIG] Model:      {client_config.model}")
-            print(f" [NVIDIA CONFIG] API Key:    {client_config.api_key[:6]}...{client_config.api_key[-4:]}")
+            print(" [NVIDIA CONFIG] API Key:    configured (value hidden)")
             print(f" [NVIDIA CONFIG] Max Tokens: {client_config.max_completion_tokens}")
             print(f" [NVIDIA CONFIG] Timeout:    {client_config.timeout}s")
             if client_config.base_url:
